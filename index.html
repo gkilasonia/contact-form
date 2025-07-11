@@ -1,52 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Contact form</title>
+  </head>
+  <body>
+    <main>
+      <form class="contact-form" action="#" method="post">
+        <h1 class="form-title">Contact Us</h1>
+        <div class="firstname-lastname-inputs-container">
+          <div class="input-container">
+            <label class="label-name" for="firstName"
+              >First Name
+              <span class="span-asterix" aria-hidden="true">*</span></label
+            >
+            <input
+              class="names-and-email-inputs"
+              type="text"
+              id="firstName"
+              name="firstName"
+              autocomplete="given-name"
+              required
+            />
+            <p class="error-msg">This field is required</p>
+          </div>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Contact form</title>
+          <div class="input-container">
+            <label class="label-name" for="lastName"
+              >Last Name
+              <span class="span-asterix" aria-hidden="true">*</span></label
+            >
+            <input
+              class="names-and-email-inputs"
+              type="text"
+              id="lastName"
+              name="lastName"
+              autocomplete="family-name"
+              required
+            />
+            <p class="error-msg">This field is required</p>
+          </div>
+        </div>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+        <div class="input-container">
+          <label class="label-name" for="email"
+            >Email address
+            <span class="span-asterix" aria-hidden="true">*</span></label
+          >
+          <input
+            class="names-and-email-inputs"
+            type="email"
+            id="email"
+            name="email"
+            autocomplete="email"
+            required
+          />
+          <p class="error-msg">Please enter a valid email address</p>
+        </div>
 
-  Contact Us
+        <fieldset class="fieldset-query-type">
+          <legend class="query-type">
+            Query Type <span class="span-asterix" aria-hidden="true">*</span>
+          </legend>
+          <div class="query-input-containers-container">
+            <div class="query-input-container">
+              <input
+                class="query-type-inputs"
+                type="radio"
+                id="generalQuery"
+                name="queryType"
+                value="General Enquiry"
+                required
+              />
+              <label class="query-type-labels" for="generalQuery"
+                >General Inquiry</label
+              >
+            </div>
+            <div class="query-input-container">
+              <input
+                class="query-type-inputs"
+                type="radio"
+                id="supportQuery"
+                name="queryType"
+                value="Support Request"
+                required
+              />
+              <label class="query-type-labels" for="supportQuery"
+                >Support Request</label
+              >
+            </div>
+          </div>
+          <p class="error-msg">Please select a query type</p>
+        </fieldset>
 
-  First Name
-  This field is required
+        <div class="message-textarea-container">
+          <label class="label-name" for="message"
+            >Message
+            <span class="span-asterix" aria-hidden="true">*</span></label
+          >
+          <textarea
+            class="message-textarea"
+            id="message"
+            name="message"
+            rows="8"
+            required
+            aria-describedby="messageHint"
+          ></textarea>
+          <small class="error-msg">This field is required</small>
+        </div>
 
-  Last Name
-  This field is required
-
-  Email Address
-  Please enter a valid email address
-  This field is required
-
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
-
-  Message
-  This field is required
-
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
-
-  Submit
-
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+        <div class="checkbox-container">
+          <input
+            class="checkbox"
+            type="checkbox"
+            id="newsletter"
+            name="newsletter"
+            value="subscribe"
+          />
+          <label class="checkbox-label" for="newsletter"
+            >I consent to being contacted by the team
+            <span class="span-asterix" aria-hidden="true">*</span></label
+          >
+          <p class="error-msg">
+            To submit this form, please consent to being contacted
+          </p>
+        </div>
+        <button class="form-submit-button" type="submit">Submit</button>
+      </form>
+    </main>
+  </body>
 </html>
