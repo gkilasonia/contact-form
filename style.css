@@ -239,7 +239,7 @@ input[type="checkbox"]:checked {
   color: var(--White);
 }
 
-@media screen and (min-width: 76.8rem) {
+@media screen and (min-width: 768px) {
   body {
     padding: 12.8rem 3.9rem;
   }
@@ -270,7 +270,7 @@ input[type="checkbox"]:checked {
   }
 }
 
-@media screen and (min-width: 144rem) {
+@media screen and (min-width: 1440px) {
   body {
     padding: 12.8rem 35.2rem;
   }
