@@ -14,7 +14,12 @@
   </head>
   <body>
     <main>
-      <form class="contact-form" action="#" method="post">
+      <form
+        id="contactUsForm"
+        class="contact-form"
+        action="javascript:void(0)"
+        method="post"
+      >
         <h1 class="form-title">Contact Us</h1>
         <div class="firstname-lastname-inputs-container">
           <div class="input-container">
@@ -30,7 +35,9 @@
               autocomplete="given-name"
               required
             />
-            <p class="error-msg">This field is required</p>
+            <span id="firstNameError" class="error-msg" role="alert"
+              >This field is required</span
+            >
           </div>
 
           <div class="input-container">
@@ -46,7 +53,9 @@
               autocomplete="family-name"
               required
             />
-            <p class="error-msg">This field is required</p>
+            <span id="lastNameError" class="error-msg" role="alert"
+              >This field is required</span
+            >
           </div>
         </div>
 
@@ -63,7 +72,9 @@
             autocomplete="email"
             required
           />
-          <p class="error-msg">Please enter a valid email address</p>
+          <span id="emailError" class="error-msg" role="alert">
+            Please enter a valid email address
+          </span>
         </div>
 
         <fieldset class="fieldset-query-type">
@@ -71,7 +82,7 @@
             Query Type <span class="span-asterix" aria-hidden="true">*</span>
           </legend>
           <div class="query-input-containers-container">
-            <div class="query-input-container">
+            <div id="generalQueryContainer" class="query-input-container">
               <input
                 class="query-type-inputs"
                 type="radio"
@@ -84,7 +95,7 @@
                 >General Inquiry</label
               >
             </div>
-            <div class="query-input-container">
+            <div id="supportQueryContainer" class="query-input-container">
               <input
                 class="query-type-inputs"
                 type="radio"
@@ -98,7 +109,9 @@
               >
             </div>
           </div>
-          <p class="error-msg">Please select a query type</p>
+          <span id="queryError" class="error-msg" role="alert"
+            >Please select a query type</span
+          >
         </fieldset>
 
         <div class="message-textarea-container">
@@ -112,29 +125,47 @@
             name="message"
             rows="8"
             required
-            aria-describedby="messageHint"
           ></textarea>
-          <small class="error-msg">This field is required</small>
+          <span id="messageError" class="error-msg" role="alert"
+            >This field is required</span
+          >
         </div>
 
         <div class="checkbox-container">
-          <input
-            class="checkbox"
-            type="checkbox"
-            id="newsletter"
-            name="newsletter"
-            value="subscribe"
-          />
-          <label class="checkbox-label" for="newsletter"
-            >I consent to being contacted by the team
-            <span class="span-asterix" aria-hidden="true">*</span></label
-          >
-          <p class="error-msg">
+          <div class="checkbox-input-container">
+            <input
+              class="checkbox"
+              type="checkbox"
+              id="newsletter"
+              name="newsletter"
+              value="subscribe"
+            />
+            <label class="checkbox-label" for="newsletter"
+              >I consent to being contacted by the team
+              <span class="span-asterix" aria-hidden="true">*</span></label
+            >
+          </div>
+          <span id="newsletterError" class="error-msg" role="alert">
             To submit this form, please consent to being contacted
-          </p>
+          </span>
         </div>
-        <button class="form-submit-button" type="submit">Submit</button>
+        <button id="formSubmitButton" class="form-submit-button" type="submit">
+          Submit
+        </button>
       </form>
     </main>
+    <div id="successMessage" class="success-message">
+      <div class="success-message-icon-container">
+        <img
+          src="./assets/images/icon-success-check.svg"
+          alt="Success checkmar"
+        />
+        <h2 class="success-message-title">Message Sent!</h2>
+      </div>
+      <p class="success-message-text">
+        Thanks for completing the form. We’ll be in touch soon!
+      </p>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>
