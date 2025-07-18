@@ -38,9 +38,9 @@ supportQueryContainer.addEventListener("click", () => {
   }
 });
 
-function displayError(elementId, message) {
+function displayError(elementId, tip) {
   const errorElement = document.getElementById(`${elementId}Error`);
-  if (message) {
+  if (tip) {
     errorElement.style.display = "block";
   } else {
     errorElement.style.display = "none";

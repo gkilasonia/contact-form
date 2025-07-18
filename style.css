@@ -7,8 +7,7 @@
   font-family: "Karla-regular";
   src: url("./assets/fonts/static/Karla-Regular.ttf") format("truetype");
 }
-
-html {
+px html {
   font-size: 62.5%;
 }
 
@@ -183,7 +182,7 @@ input[type="radio"]:checked {
 .checkbox {
   width: 2rem;
   height: 2rem;
-  border: 1px solid var(--Grey-500);
+  border: 0.1rem solid var(--Grey-500);
 }
 
 input[type="checkbox"]:checked {
@@ -210,36 +209,36 @@ input[type="checkbox"]:checked {
 .success-message {
   display: none;
   flex-direction: column;
-  gap: 8px;
+  gap: 0.8rem;
   position: absolute;
-  top: 24px;
-  left: 24px;
-  right: 24px;
+  top: 2.4rem;
+  left: 2.4rem;
+  right: 2.4rem;
   background-color: var(--Green-900);
-  border-radius: 12px;
-  padding: 24px;
+  border-radius: 1.2rem;
+  padding: 2.4rem;
 }
 
 .success-message-icon-container {
   display: flex;
-  gap: 8px;
+  gap: 0.8rem;
 }
 
 .success-message-title {
   font-weight: 700;
-  font-size: 18px;
+  font-size: 1.8rem;
   line-height: 150%;
   color: var(--White);
 }
 
 .success-message-text {
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 150%;
   color: var(--White);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 76.8rem) {
   body {
     padding: 12.8rem 3.9rem;
   }
@@ -265,12 +264,12 @@ input[type="checkbox"]:checked {
   }
 
   .success-message {
-    left: 159px;
-    right: 159px;
+    left: 15.9rem;
+    right: 15.9rem;
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 144rem) {
   body {
     padding: 12.8rem 35.2rem;
   }
@@ -280,8 +279,8 @@ input[type="checkbox"]:checked {
   }
 
   .success-message {
-    left: 495px;
-    right: 495px;
+    left: 49.5rem;
+    right: 49.5rem;
   }
 }
 
